@@ -1,5 +1,5 @@
-const React = require('react');
 
+const React = require ('react');
 const headerStyle={
     color:"green",
     fontSize:"24"
@@ -8,6 +8,7 @@ const linkStyle={
     color:'red',
     fontSize: '24px'
 }
+
 class Index extends React.Component {
     render() {
         const { pokemon } = this.props;
@@ -17,14 +18,17 @@ class Index extends React.Component {
                     See all the Pokemon! 
                 </h1>
                 <ul>
-                {pokemon.map((pokey, i) => {
+                {this.props.pokemons?.map((pokey,i) =>
+               {
                             return (
-                                <li>
+                                <li key={i}>
 
                                     The{' '}
-                                    <a href={`/pokemon/${i}`}>
+                                    <a href ={`/pokemon/${pokemon._id}`} >  { pokey.name } </a> 
+                                    {/* <a href={`/pokemon/${i}`}>
                                         {pokey.name}
-                                    </a>{' '}
+                                    </a> */}
+                                    {' '}
                                     is {pokey.img}. <br></br>
                                   
                                     <br />
@@ -32,9 +36,11 @@ class Index extends React.Component {
                                 </li>
                             );
                 
-            })}
-                    
-                    
+            })} 
+            
+            
+            
+          
                 </ul>
                 <nav>
                         <a  style={linkStyle}  href='/'> Back </a>
@@ -46,3 +52,5 @@ class Index extends React.Component {
 }
 
 module.exports = Index;
+
+

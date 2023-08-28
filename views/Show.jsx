@@ -18,9 +18,9 @@ const linkStyle={
                 <h1 style={headerStyle}> 
                      Gotta Catch 'Em All!    
                 </h1>
-                <h2>The {pokey.name} and  </h2>
+                <h2>The The {this.props.pokey.name } and  </h2>
                  
-                 <img src= {pokey.img}  alt='Pokemon Img'/>
+                 <img src= {this.props.pokey.img } alt='Pokemon Img'/>
                  <br/>
                  <br/>
 
@@ -39,22 +39,3 @@ const linkStyle={
      module.exports  = Show;
 
 
-// const React = require('react')
-// class Show extends React.Component {
-// render () {
-//     return(
-//         <div>
-//              <h1 style={headerStyle}> 
-//                     Gotta Catch 'Em All! 
-//                 </h1>
-//                 <h2>
-//                 {pokey.name}
-//                 </h2>
-//                 <img src={pokey.img} alt='Pokemon ingage'/>
-                
-                
-//         </div>
-//     )
-// }
-// }
-//  module.exports = Show;
